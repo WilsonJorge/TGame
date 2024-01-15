@@ -19,6 +19,15 @@ def game():
 
     # Lista de palavras para o jogo
     palavras = ['banana', 'abacate', 'uva', 'morango', 'laranja']
-
+    
+    # Escolhe a palavras
     palavra = random.choice(palavras)
-            
+
+    #List Comprehension
+    letras_descobertas = ['_' for letra in palavra]
+
+    #Numero de Chances 
+    chances =6
+    
+    #Lista para letras erradas
+    lestras_erradas = []        
