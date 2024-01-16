@@ -28,6 +28,29 @@ def game():
 
     #Numero de Chances 
     chances =6
-    
+
     #Lista para letras erradas
-    lestras_erradas = []        
+    lestras_erradas = []  
+
+    #Loop enquantp numero de chances for maior que zero
+
+    while chances > 0:
+        #print
+        print("".join(letras_descobertas))
+        print("\nChances restantes:",chances)
+        print("Letras erradas:","".join(lestras_erradas))
+
+        #Tentativa
+        tentativa = input("n\Digite uma letra:").lower()      
+
+        # Condicional
+        if tentativa in palavra:
+            index = 0
+
+            for letra in palavra:
+                if tentativa == letra:
+                    letras_descobertas[index] = letra
+                index+= 1
+        else:
+            chances -= 1
+            lestras_erradas.append(tentativa)        
