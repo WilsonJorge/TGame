@@ -53,4 +53,14 @@ def game():
                 index+= 1
         else:
             chances -= 1
-            lestras_erradas.append(tentativa)        
+            lestras_erradas.append(tentativa)
+
+        # Condicional
+        if "_" not in letras_descobertas :
+            print("\n Voce Ganhou, a Palavra era:", palavra)
+        break
+
+if __name__  == "_main_" :
+     game()
+     print("\n Parabens. Voce esta apredendo programacao em Python com a DSA. :)\n") 
+
